@@ -1,0 +1,3 @@
+[submodule "pfapack-sys"]
+	path = pfapack-sys
+	url = https://github.com/Duumbo/pfapack-sys-rs
