@@ -12,16 +12,16 @@ use crate::{c32, c64, c_char};
 /// * __*`a`*__ - (input/output) Pointer to a memory block of size
 /// `(kd+1)*n*sizeof(datatype)`.
 ///
-///     If `n` is odd: AB is not referenced.
+///     > If `n` is odd: AB is not referenced.
 ///
-///     If `n` is even: On entry, A must contain a Fortran matrtix. The upper
-///     or lower triangle of the skew-symmetric band matrix A, stored in the
-///     first `kd+1` rows of the array. The j-th column of A is stored in the
-///     j-th column of the array AB as follows:
+///     > If `n` is even: On entry, A must contain a Fortran matrtix. The upper
+///     > or lower triangle of the skew-symmetric band matrix A, stored in the
+///     > first `kd+1` rows of the array. The j-th column of A is stored in the
+///     > j-th column of the array AB as follows:
 ///
-///     if `uplo = 'U'`, AB(`kd`+1+i-j,j) = a(i,j) for `max(1,j-kd)<=i<=j`;
+///     > If `uplo = 'U'`, AB(`kd`+1+i-j,j) = a(i,j) for `max(1,j-kd)<=i<=j`;
 ///
-///     if `uplo = 'L'`, AB(1+i-j,j) = A(i,j) for `j<=i<=min(n,j+kd)`.
+///     > If `uplo = 'L'`, AB(1+i-j,j) = A(i,j) for `j<=i<=min(n,j+kd)`.
 ///
 ///     On exit, AB is overwritten with values generated during the
 ///     computation.
@@ -34,12 +34,12 @@ use crate::{c32, c64, c_char};
 /// * __*`work`*__ - (workspace) LAPACK work array.
 /// * __*`info`*__ - (output)
 ///
-///     > if = 0: successful exit;
+///     > If = 0: successful exit;
 ///
-///     > if < 0: if the return value is -i, the i-th argument had an illegal
+///     > If < 0: if the return value is -i, the i-th argument had an illegal
 ///     > value;
 ///
-///     > if = -100: failed to allocate enough internal memory.
+///     > If = -100: failed to allocate enough internal memory.
 #[inline]
 pub unsafe fn sskbpf10(
     uplo: u8,
@@ -75,16 +75,16 @@ pub unsafe fn sskbpf10(
 /// * __*`a`*__ - (input/output) Pointer to a memory block of size
 /// `(kd+1)*n*sizeof(datatype)`.
 ///
-///     If `n` is odd: AB is not referenced.
+///     > If `n` is odd: AB is not referenced.
 ///
-///     If `n` is even: On entry, A must contain a Fortran matrtix. The upper
-///     or lower triangle of the skew-symmetric band matrix A, stored in the
-///     first `kd+1` rows of the array. The j-th column of A is stored in the
-///     j-th column of the array AB as follows:
+///     > If `n` is even: On entry, A must contain a Fortran matrtix. The upper
+///     > or lower triangle of the skew-symmetric band matrix A, stored in the
+///     > first `kd+1` rows of the array. The j-th column of A is stored in the
+///     > j-th column of the array AB as follows:
 ///
-///     if `uplo = 'U'`, AB(`kd`+1+i-j,j) = A(i,j) for `max(1,j-kd)<=i<=j`;
+///     > If `uplo = 'U'`, AB(`kd`+1+i-j,j) = A(i,j) for `max(1,j-kd)<=i<=j`;
 ///
-///     if `uplo = 'L'`, AB(1+i-j,j) = A(i,j) for `j<=i<=min(n,j+kd)`.
+///     > If `uplo = 'L'`, AB(1+i-j,j) = A(i,j) for `j<=i<=min(n,j+kd)`.
 ///
 ///     On exit, AB is overwritten with values generated during the
 ///     computation.
@@ -97,12 +97,12 @@ pub unsafe fn sskbpf10(
 /// * __*`work`*__ - (workspace) LAPACK work array.
 /// * __*`info`*__ - (output)
 ///
-///     > if = 0: successful exit;
+///     > If = 0: successful exit;
 ///
-///     > if < 0: if the return value is -i, the i-th argument had an illegal
+///     > If < 0: if the return value is -i, the i-th argument had an illegal
 ///     > value;
 ///
-///     > if = -100: failed to allocate enough internal memory.
+///     > If = -100: failed to allocate enough internal memory.
 #[inline]
 pub unsafe fn dskbpf10(
     uplo: u8,
@@ -138,16 +138,16 @@ pub unsafe fn dskbpf10(
 /// * __*`a`*__ - (input/output) Pointer to a memory block of size
 /// `(kd+1)*n*sizeof(datatype)`.
 ///
-///     If `n` is odd: AB is not referenced.
+///     > If `n` is odd: AB is not referenced.
 ///
-///     If `n` is even: On entry, A must contain a Fortran matrtix. The upper
-///     or lower triangle of the skew-symmetric band matrix A, stored in the
-///     first `kd+1` rows of the array. The j-th column of A is stored in the
-///     j-th column of the array AB as follows:
+///     > If `n` is even: On entry, A must contain a Fortran matrtix. The upper
+///     > or lower triangle of the skew-symmetric band matrix A, stored in the
+///     > first `kd+1` rows of the array. The j-th column of A is stored in the
+///     > j-th column of the array AB as follows:
 ///
-///     if `uplo = 'U'`, AB(`kd`+1+i-j,j) = A(i,j) for `max(1,j-kd)<=i<=j`;
+///     > If `uplo = 'U'`, AB(`kd`+1+i-j,j) = A(i,j) for `max(1,j-kd)<=i<=j`;
 ///
-///     if `uplo = 'L'`, AB(1+i-j,j) = A(i,j) for `j<=i<=min(n,j+kd)`.
+///     > If `uplo = 'L'`, AB(1+i-j,j) = A(i,j) for `j<=i<=min(n,j+kd)`.
 ///
 ///     On exit, AB is overwritten with values generated during the
 ///     computation.
@@ -161,12 +161,12 @@ pub unsafe fn dskbpf10(
 /// * __*`rwork`*__ - (workspace) Real LAPACK work array.
 /// * __*`info`*__ - (output)
 ///
-///     > if = 0: successful exit;
+///     > If = 0: successful exit;
 ///
-///     > if < 0: if the return value is -i, the i-th argument had an illegal
+///     > If < 0: if the return value is -i, the i-th argument had an illegal
 ///     > value;
 ///
-///     > if = -100: failed to allocate enough internal memory.
+///     > If = -100: failed to allocate enough internal memory.
 #[inline]
 pub unsafe fn cskbpf10(
     uplo: u8,
@@ -204,16 +204,16 @@ pub unsafe fn cskbpf10(
 /// * __*`a`*__ - (input/output) Pointer to a memory block of size
 /// `(kd+1)*n*sizeof(datatype)`.
 ///
-///     If `n` is odd: AB is not referenced.
+///     > If `n` is odd: AB is not referenced.
 ///
-///     If `n` is even: On entry, A must contain a Fortran matrtix. The upper
-///     or lower triangle of the skew-symmetric band matrix A, stored in the
-///     first `kd+1` rows of the array. The j-th column of A is stored in the
-///     j-th column of the array AB as follows:
+///     > If `n` is even: On entry, A must contain a Fortran matrtix. The upper
+///     > or lower triangle of the skew-symmetric band matrix A, stored in the
+///     > first `kd+1` rows of the array. The j-th column of A is stored in the
+///     > j-th column of the array AB as follows:
 ///
-///     if `uplo = 'U'`, AB(`kd`+1+i-j,j) = A(i,j) for `max(1,j-kd)<=i<=j`;
+///     > If `uplo = 'U'`, AB(`kd`+1+i-j,j) = A(i,j) for `max(1,j-kd)<=i<=j`;
 ///
-///     if `uplo = 'L'`, AB(1+i-j,j) = A(i,j) for `j<=i<=min(n,j+kd)`.
+///     > If `uplo = 'L'`, AB(1+i-j,j) = A(i,j) for `j<=i<=min(n,j+kd)`.
 ///
 ///     On exit, AB is overwritten with values generated during the
 ///     computation.
@@ -227,12 +227,12 @@ pub unsafe fn cskbpf10(
 /// * __*`rwork`*__ - (workspace) Real LAPACK work array.
 /// * __*`info`*__ - (output)
 ///
-///     > if = 0: successful exit;
+///     > If = 0: successful exit;
 ///
-///     > if < 0: if the return value is -i, the i-th argument had an illegal
+///     > If < 0: if the return value is -i, the i-th argument had an illegal
 ///     > value;
 ///
-///     > if = -100: failed to allocate enough internal memory.
+///     > If = -100: failed to allocate enough internal memory.
 #[inline]
 pub unsafe fn zskbpf10(
     uplo: u8,

@@ -19,9 +19,9 @@ use crate::{c32, c64, c_char};
 ///     > in the first `kd+1` rows of the array. The j-th column of A is
 ///     > stored in the j-th column of the array AB as follows:
 ///
-///     > if `uplo = 'U'`, AB(`kd`+1+i-j,j) = A(i,j) for `max(1,j-kd)<=i<=j`;
+///     > If `uplo = 'U'`, AB(`kd`+1+i-j,j) = A(i,j) for `max(1,j-kd)<=i<=j`;
 ///
-///     > if `uplo = 'L'`, AB(1+i-j,j) = A(i,j) for `j<=i<=min(n,j+kd)`.
+///     > If `uplo = 'L'`, AB(1+i-j,j) = A(i,j) for `j<=i<=min(n,j+kd)`.
 ///
 ///     On exit, AB is overwritten with values generated during the
 ///     computation.
@@ -34,12 +34,12 @@ use crate::{c32, c64, c_char};
 /// * __*`work`*__ - (workspace) LAPACK work array.
 /// * __*`info`*__ - (output)
 ///
-///     > if = 0: successful exit;
+///     > If = 0: successful exit;
 ///
-///     > if < 0: if the return value is -i, the i-th argument had an illegal
+///     > If < 0: if the return value is -i, the i-th argument had an illegal
 ///     > value;
 ///
-///     > if = -100: failed to allocate enough internal memory.
+///     > If = -100: failed to allocate enough internal memory.
 #[inline]
 pub unsafe fn sskbpfa(
     uplo: u8,
@@ -82,9 +82,9 @@ pub unsafe fn sskbpfa(
 ///     > in the first `kd+1` rows of the array. The j-th column of A is
 ///     > stored in the j-th column of the array AB as follows:
 ///
-///     > if `uplo = 'U'`, AB(`kd`+1+i-j,j) = A(i,j) for `max(1,j-kd)<=i<=j`;
+///     > If `uplo = 'U'`, AB(`kd`+1+i-j,j) = A(i,j) for `max(1,j-kd)<=i<=j`;
 ///
-///     > if `uplo = 'L'`, AB(1+i-j,j) = A(i,j) for `j<=i<=min(n,j+kd)`.
+///     > If `uplo = 'L'`, AB(1+i-j,j) = A(i,j) for `j<=i<=min(n,j+kd)`.
 ///
 ///     On exit, AB is overwritten with values generated during the
 ///     computation.
@@ -97,12 +97,12 @@ pub unsafe fn sskbpfa(
 /// * __*`work`*__ - (workspace) LAPACK work array.
 /// * __*`info`*__ - (output)
 ///
-///     > if = 0: successful exit;
+///     > If = 0: successful exit;
 ///
-///     > if < 0: if the return value is -i, the i-th argument had an illegal
+///     > If < 0: if the return value is -i, the i-th argument had an illegal
 ///     > value;
 ///
-///     > if = -100: failed to allocate enough internal memory.
+///     > If = -100: failed to allocate enough internal memory.
 #[inline]
 pub unsafe fn dskbpfa(
     uplo: u8,
@@ -145,9 +145,9 @@ pub unsafe fn dskbpfa(
 ///     > in the first `kd+1` rows of the array. The j-th column of A is
 ///     > stored in the j-th column of the array AB as follows:
 ///
-///     > if `uplo = 'U'`, AB(`kd`+1+i-j,j) = A(i,j) for `max(1,j-kd)<=i<=j`;
+///     > If `uplo = 'U'`, AB(`kd`+1+i-j,j) = A(i,j) for `max(1,j-kd)<=i<=j`;
 ///
-///     > if `uplo = 'L'`, AB(1+i-j,j) = A(i,j) for `j<=i<=min(n,j+kd)`.
+///     > If `uplo = 'L'`, AB(1+i-j,j) = A(i,j) for `j<=i<=min(n,j+kd)`.
 ///
 ///     On exit, AB is overwritten with values generated during the
 ///     computation.
@@ -161,12 +161,12 @@ pub unsafe fn dskbpfa(
 /// * __*`rwork`*__ - (workspace) Real LAPACK work array.
 /// * __*`info`*__ - (output)
 ///
-///     > if = 0: successful exit;
+///     > If = 0: successful exit;
 ///
-///     > if < 0: if the return value is -i, the i-th argument had an illegal
+///     > If < 0: if the return value is -i, the i-th argument had an illegal
 ///     > value;
 ///
-///     > if = -100: failed to allocate enough internal memory.
+///     > If = -100: failed to allocate enough internal memory.
 #[inline]
 pub unsafe fn cskbpfa(
     uplo: u8,
@@ -211,9 +211,9 @@ pub unsafe fn cskbpfa(
 ///     > first `kd+1` rows of the array. The j-th column of A is stored in the
 ///     > j-th column of the array AB as follows:
 ///
-///     > if `uplo = 'U'`, AB(`kd`+1+i-j,j) = A(i,j) for `max(1,j-kd)<=i<=j`;
+///     > If `uplo = 'U'`, AB(`kd`+1+i-j,j) = A(i,j) for `max(1,j-kd)<=i<=j`;
 ///
-///     > if `uplo = 'L'`, AB(1+i-j,j) = A(i,j) for `j<=i<=min(n,j+kd)`.
+///     > If `uplo = 'L'`, AB(1+i-j,j) = A(i,j) for `j<=i<=min(n,j+kd)`.
 ///
 ///     On exit, AB is overwritten with values generated during the
 ///     computation.
@@ -227,12 +227,12 @@ pub unsafe fn cskbpfa(
 /// * __*`rwork`*__ - (workspace) Real LAPACK work array.
 /// * __*`info`*__ - (output)
 ///
-///     > if = 0: successful exit;
+///     > If = 0: successful exit;
 ///
-///     > if < 0: if the return value is -i, the i-th argument had an illegal
+///     > If < 0: if the return value is -i, the i-th argument had an illegal
 ///     > value;
 ///
-///     > if = -100: failed to allocate enough internal memory.
+///     > If = -100: failed to allocate enough internal memory.
 #[inline]
 pub unsafe fn zskbpfa(
     uplo: u8,

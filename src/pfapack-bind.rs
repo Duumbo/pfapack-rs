@@ -437,7 +437,7 @@ pub unsafe fn zskpf10(
 ///
 /// `zskbtrd` reduces a complex skew-symmetric band matrix A to real
 /// skew-symmetric tridiagonal form T by a unitary congruence transformation:
-/// Q^dagger * A * Q^* = T. Alternatively, the routine can also compute a
+/// `Q^dagger * A * Q^* = T`. Alternatively, the routine can also compute a
 /// partial tridiagonal form useful for computing the Pfaffian.
 ///
 /// # Further Details
@@ -516,6 +516,6 @@ pub mod skbpfa;
 /// For odd-sized matrices, the Pfaffian is 0 by default, hence no computation
 /// is needed in this case. For even-sized matrices, the Pfaffian is computed
 /// by bringing the skew-symmetric matrix A into tridiagonal form T by a
-/// unitary congruence transformation: Q^H * A * Q^* = T. This transformation
+/// unitary congruence transformation: `Q^H * A * Q^* = T`. This transformation
 /// is computed by the routine [`ssktrd`] (for further details see there).
 pub mod skbpf10;
