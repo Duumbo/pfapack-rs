@@ -2,9 +2,7 @@ extern crate pfapack_sys as ffi;
 extern crate libc;
 extern crate num_complex as num;
 
-use std::mem::transmute;
-
-use libc::{c_char, size_t};
+use libc::c_char;
 
 /// A complex number with 32-bit parts
 #[allow(non_camel_case_types)]
