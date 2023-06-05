@@ -226,229 +226,38 @@ pub mod sktrf;
 /// element not computed by `sktrd`.
 pub mod sktrd;
 
-#[inline]
-pub unsafe fn sskpfa(
-    arg1: u8,
-    arg2: u8,
-    arg3: &[i32],
-    arg4: &mut [f32],
-    arg5: &[i32],
-    arg6: &mut [f32],
-    arg7: &mut [i32],
-    arg8: &mut [f32],
-    arg9: &[i32],
-    arg10: &mut [i32],
-) {
-    ffi::sskpfa_(
-        &(arg1 as c_char),
-        &(arg2 as c_char),
-        arg3.as_ptr(),
-        arg4.as_mut_ptr(),
-        arg5.as_ptr(),
-        arg6.as_mut_ptr(),
-        arg7.as_mut_ptr(),
-        arg8.as_mut_ptr(),
-        arg9.as_ptr(),
-        arg10.as_mut_ptr(),
-    )
-}
+/// Computes the Pfaffian of a skew-symmetric matrix.
+///
+/// # Purpose
+///
+/// Computes the Pfaffian of a skew-symmetric matrix.
+///
+/// # Further Details
+///
+/// The Pfaffian is computed by bringing the skew-symmetric matrix A into
+/// a partial tridiagonal form pT, either by computing a partial `L pT L^T`
+/// decomposition `mthd = 'P'`, or by a by a unitary congruence transformation
+/// `Q^H * A * Q^* = pT` `mthd = 'H'`.
+/// These transformations are computed by the routines [`sktrf`] or [`sktrd`],
+/// respectively (for further details see there).
+pub mod skpfa;
 
-#[inline]
-pub unsafe fn dskpfa(
-    arg1: u8,
-    arg2: u8,
-    arg3: &[i32],
-    arg4: &mut [f64],
-    arg5: &[i32],
-    arg6: &mut [f64],
-    arg7: &mut [i32],
-    arg8: &mut [f64],
-    arg9: &[i32],
-    arg10: &mut [i32],
-) {
-    ffi::dskpfa_(
-        &(arg1 as c_char),
-        &(arg2 as c_char),
-        arg3.as_ptr(),
-        arg4.as_mut_ptr(),
-        arg5.as_ptr(),
-        arg6.as_mut_ptr(),
-        arg7.as_mut_ptr(),
-        arg8.as_mut_ptr(),
-        arg9.as_ptr(),
-        arg10.as_mut_ptr(),
-    )
-}
-
-#[inline]
-pub unsafe fn cskpfa(
-    arg1: u8,
-    arg2: u8,
-    arg3: &[i32],
-    arg4: &mut [c32],
-    arg5: &[i32],
-    arg6: &mut [c32],
-    arg7: &mut [i32],
-    arg8: &mut [c32],
-    arg9: &[i32],
-    arg10: &mut [f32],
-    arg11: &mut [i32],
-) {
-    ffi::cskpfa_(
-        &(arg1 as c_char),
-        &(arg2 as c_char),
-        arg3.as_ptr(),
-        arg4.as_mut_ptr() as *mut _,
-        arg5.as_ptr(),
-        arg6.as_mut_ptr() as *mut _,
-        arg7.as_mut_ptr(),
-        arg8.as_mut_ptr() as *mut _,
-        arg9.as_ptr(),
-        arg10.as_mut_ptr(),
-        arg11.as_mut_ptr(),
-    )
-}
-
-#[inline]
-pub unsafe fn zskpfa(
-    arg1: u8,
-    arg2: u8,
-    arg3: &[i32],
-    arg4: &mut [c64],
-    arg5: &[i32],
-    arg6: &mut [c64],
-    arg7: &mut [i32],
-    arg8: &mut [c64],
-    arg9: &[i32],
-    arg10: &mut [f64],
-    arg11: &mut [i32],
-) {
-    ffi::zskpfa_(
-        &(arg1 as c_char),
-        &(arg2 as c_char),
-        arg3.as_ptr(),
-        arg4.as_mut_ptr() as *mut _,
-        arg5.as_ptr(),
-        arg6.as_mut_ptr() as *mut _,
-        arg7.as_mut_ptr(),
-        arg8.as_mut_ptr() as *mut _,
-        arg9.as_ptr(),
-        arg10.as_mut_ptr(),
-        arg11.as_mut_ptr(),
-    )
-}
-
-#[inline]
-pub unsafe fn sskpf10(
-    arg1: u8,
-    arg2: u8,
-    arg3: &[i32],
-    arg4: &mut [f32],
-    arg5: &[i32],
-    arg6: &mut [f32],
-    arg7: &mut [i32],
-    arg8: &mut [f32],
-    arg9: &[i32],
-    arg10: &mut [i32],
-) {
-    ffi::sskpf10_(
-        &(arg1 as c_char),
-        &(arg2 as c_char),
-        arg3.as_ptr(),
-        arg4.as_mut_ptr(),
-        arg5.as_ptr(),
-        arg6.as_mut_ptr(),
-        arg7.as_mut_ptr(),
-        arg8.as_mut_ptr(),
-        arg9.as_ptr(),
-        arg10.as_mut_ptr(),
-    )
-}
-
-#[inline]
-pub unsafe fn dskpf10(
-    arg1: u8,
-    arg2: u8,
-    arg3: &[i32],
-    arg4: &mut [f64],
-    arg5: &[i32],
-    arg6: &mut [f64],
-    arg7: &mut [i32],
-    arg8: &mut [f64],
-    arg9: &[i32],
-    arg10: &mut [i32],
-) {
-    ffi::dskpf10_(
-        &(arg1 as c_char),
-        &(arg2 as c_char),
-        arg3.as_ptr(),
-        arg4.as_mut_ptr(),
-        arg5.as_ptr(),
-        arg6.as_mut_ptr(),
-        arg7.as_mut_ptr(),
-        arg8.as_mut_ptr(),
-        arg9.as_ptr(),
-        arg10.as_mut_ptr(),
-    )
-}
-
-#[inline]
-pub unsafe fn cskpf10(
-    arg1: u8,
-    arg2: u8,
-    arg3: &[i32],
-    arg4: &mut [c32],
-    arg5: &[i32],
-    arg6: &mut [c32],
-    arg7: &mut [i32],
-    arg8: &mut [c32],
-    arg9: &[i32],
-    arg10: &mut [f32],
-    arg11: &mut [i32],
-) {
-    ffi::cskpf10_(
-        &(arg1 as c_char),
-        &(arg2 as c_char),
-        arg3.as_ptr(),
-        arg4.as_mut_ptr() as *mut _,
-        arg5.as_ptr(),
-        arg6.as_mut_ptr() as *mut _,
-        arg7.as_mut_ptr(),
-        arg8.as_mut_ptr() as *mut _,
-        arg9.as_ptr(),
-        arg10.as_mut_ptr(),
-        arg11.as_mut_ptr(),
-    )
-}
-
-#[inline]
-pub unsafe fn zskpf10(
-    arg1: u8,
-    arg2: u8,
-    arg3: &[i32],
-    arg4: &mut [c64],
-    arg5: &[i32],
-    arg6: &mut [c64],
-    arg7: &mut [i32],
-    arg8: &mut [c64],
-    arg9: &[i32],
-    arg10: &mut [f64],
-    arg11: &mut [i32],
-) {
-    ffi::zskpf10_(
-        &(arg1 as c_char),
-        &(arg2 as c_char),
-        arg3.as_ptr(),
-        arg4.as_mut_ptr() as *mut _,
-        arg5.as_ptr(),
-        arg6.as_mut_ptr() as *mut _,
-        arg7.as_mut_ptr(),
-        arg8.as_mut_ptr() as *mut _,
-        arg9.as_ptr(),
-        arg10.as_mut_ptr(),
-        arg11.as_mut_ptr(),
-    )
-}
+/// Computes the Pfaffian of a skew-symmetric matrix, with care to overflow.
+/// # Purpose
+///
+/// `skpf10` computes the Pfaffian of a skew-symmetric matrix, taking
+/// special care to avoid numerical under- or overflow.
+/// (at the cost of possible additional round-off errors)
+///
+/// # Further Details
+///
+/// The Pfaffian is computed by bringing the skew-symmetric matrix A into
+/// a partial tridiagonal form pT, either by computing a partial `L pT L^T`
+/// decomposition `mthd = 'P'`, or by a by a unitary congruence transformation
+/// `Q^H * A * Q^* = pT` `mthd = 'H'`.
+/// These transformations are computed by the routines [`sktrf`] or [`sktrd`]
+/// respectively (for further details see there).
+pub mod skpf10;
 
 #[inline]
 pub unsafe fn sskbtrd(
