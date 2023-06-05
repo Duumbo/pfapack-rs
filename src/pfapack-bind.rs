@@ -328,7 +328,7 @@ pub mod skbtrd;
 /// is needed in this case. For even-sized matrices, the Pfaffian is computed
 /// by bringing the skew-symmetric matrix A into tridiagonal form T by a
 /// unitary congruence transformation: `Q^H * A * Q^* = T`. This transformation
-/// is computed by the routine [`ssktrd`] (for further details see there).
+/// is computed by the routine [`sktrd`] (for further details see there).
 pub mod skbpfa;
 
 /// Computes the Pfaffian of a banded skew-symmetric matrix taking special care
@@ -346,5 +346,5 @@ pub mod skbpfa;
 /// is needed in this case. For even-sized matrices, the Pfaffian is computed
 /// by bringing the skew-symmetric matrix A into tridiagonal form T by a
 /// unitary congruence transformation: `Q^H * A * Q^* = T`. This transformation
-/// is computed by the routine [`ssktrd`] (for further details see there).
+/// is computed by the routine [`sktrd`] (for further details see there).
 pub mod skbpf10;
