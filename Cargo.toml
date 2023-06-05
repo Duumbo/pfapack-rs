@@ -3,6 +3,9 @@ name = "pfapack"
 version = "0.1.0"
 edition = "2021"
 license-file = "LapackLicense"
+description = "Rust interface for the pfapack library, a Fortran library to compute Pfaffians."
+repository = "https://github.com/Duumbo/pfapack-rs/tree/main"
+readme = "README.md"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
