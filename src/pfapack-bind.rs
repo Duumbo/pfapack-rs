@@ -17,7 +17,6 @@
 /// This subroutine uses, if enough memory is available, the
 /// blocked version of the algorithm.
 
-
 /// Pointer to a memory block of size N*N*sizeof(datatype)
 /// On entry, the skew-symmetric NxN-matrix A in Fortran format.
 /// On exit, the tridiagonal matrix T and the multipliers used
