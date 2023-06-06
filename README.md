@@ -1,5 +1,3 @@
-# pfapack-rs
-
 <div align="center">
 
 # pfapack-rs
