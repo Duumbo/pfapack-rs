@@ -2,7 +2,7 @@
 
 # pfapack-rs
 
-Rust port of the Fortran library pfapack (arXiv:1102.3440)
+Rust port of the Fortran library pfapack (arXiv:1102.3440) published on [Crates.io](https://crates.io/crates/pfapack).
 
 ![Rust](https://img.shields.io/badge/rust-%23000000.svg?style=for-the-badge&logo=rust&logoColor=white)
 
