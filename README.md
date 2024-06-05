@@ -54,6 +54,9 @@ and it will update/upgrade the version of your Rust compiler.
 
 Users must also have a version of [LAPACK](https://www.netlib.org/lapack/) (Linear Algebra PACKage) and [BLAS](https://www.netlib.org/blas/) (Basic Linear Algebra Subprograms) on their computers. Pfapack uses directly those Fortran libraries.
 
+### Compilers
+You must have a valid C and Fortran compiler, we would suggest the GNU suite, as I believe `gfortran` is hard coded in the Makefile of pfapack. This crate will compile pfapack inplace, we are looking into making it possible to use system installed pfapack.
+
 ## Installation
 
 Using `cargo`, just add the following to your `Cargo.toml`
